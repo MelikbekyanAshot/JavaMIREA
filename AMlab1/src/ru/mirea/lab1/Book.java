@@ -30,4 +30,9 @@ public class Book {
     public Integer getPublicationYear() {
         return publicationYear;
     }
+
+    public String toString() {
+        return "Author: " + this.author + "\nBook name: " + this.bookName + "\nPublication year: "
+                + this.publicationYear  + "\n";
+    }
 }

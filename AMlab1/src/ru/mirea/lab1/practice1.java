@@ -6,7 +6,8 @@ public class practice1 {
         Dog myDog = new Dog("Jessie", 2);
         System.out.println("Test of Dog class");
         System.out.println("Dog's name: " + myDog.getDogName());
-        System.out.println("Dog's age: " + myDog.getDogAge() + "\n");
+        System.out.println("Dog's age: " + myDog.getDogAge());
+        System.out.println("Dog's age in human years: " + myDog.intoHumanAge() + "\n");
 
         Ball myBall = new Ball("football", "Nike");
         System.out.println("Test of Ball class");

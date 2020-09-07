@@ -23,4 +23,13 @@ public class Dog {
     public Integer getDogAge() {
         return dogAge;
     }
+
+    public Integer intoHumanAge () {
+        return this.dogAge * 7;
+    }
+
+    public String toString() {
+        return "Dog's name: " + this.dogName + "\nDog's age: " + this.dogAge
+                + "\nDog's age in human years: " + this.intoHumanAge() + "\n";
+    }
 }

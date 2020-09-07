@@ -22,4 +22,8 @@ public class Ball {
     public String getBallManufacturer() {
         return manufacturer;
     }
+
+    public String toString() {
+        return "Ball's type: " + this.type + "\nBall's manufacturer: " + this.manufacturer  + "\n";
+    }
 }
