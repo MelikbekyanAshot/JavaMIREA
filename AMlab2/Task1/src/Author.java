@@ -24,6 +24,6 @@ public class Author {
     }
 
     public String toString() {
-        return "Name: " + this.name + "\nEmail: " + this.email + "\nGender: " + this.gender + "\n";
+        return this.name + " (" + this.gender + ") at "+ this.email + "\n";
     }
 }
