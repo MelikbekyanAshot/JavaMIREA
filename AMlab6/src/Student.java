@@ -2,7 +2,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private final int idNumber;
     private final String surname;
     private final double gpa;
@@ -28,5 +28,10 @@ public class Student {
     @Override
     public String toString() {
         return "\n" + surname + " " + idNumber + " " + gpa;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return (int) (10*(this.getGpa() - o.getGpa()));
     }
 }
