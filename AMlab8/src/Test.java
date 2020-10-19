@@ -1,12 +1,12 @@
 import java.util.Scanner;
-/*
-* Класс для тестирования работоспособности BoundedWaitList и UnfairWaitList
-*
+/**
+ * Класс для тестирования работоспособности BoundedWaitList и UnfairWaitList
  */
 public class Test {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
+        // Проверка работоспособности класса BoundedWaitList
         System.out.println("Проверка работоспособности ограниченного списка ожидания");
         System.out.println("Введите вместимость очереди");
         int capacity = keyboard.nextInt();
@@ -45,9 +45,9 @@ public class Test {
             searchList.add(keyboard.next());
         }
         if (boundedWaitList.containsAll(searchList.content)) {
-            System.out.println("Элемент найден");
+            System.out.println("Очередь найдена");
         } else {
-            System.out.println("Элемент не найден");
+            System.out.println("Очередь не найдена");
         }
 
         // Проверка очереди на пустоту
@@ -59,20 +59,30 @@ public class Test {
         }
 
 
+        // Проверка работоспособности класса UnfairWaitList
         System.out.println("\n\nПроверка работоспособности неограниченной очереди");
         UnfairWaitList<String> unfairWaitList = new UnfairWaitList<>();
+
+        // Добавление элементов в очередь
         System.out.println("Добавление элементов в очередь");
-        unfairWaitList.add("Москва");
-        unfairWaitList.add("Париж");
-        unfairWaitList.add("Вашингтон");
-        unfairWaitList.add("Прага");
-        unfairWaitList.add("Вена");
+        System.out.println("Сколько элементов необходимо добавить?");
+        capacity = keyboard.nextInt();
+        System.out.println("Введите элементы очереди");
+        for (int i = 0; i < capacity; i++) {
+            unfairWaitList.add(keyboard.next());
+        }
         System.out.println(unfairWaitList);
-        System.out.println("Удаление элемента из очереди\nВведите название элемента, который необходимо удалить");
+
+        // Удаление заданного элемента из очереди
+        System.out.println("Удаление элемента из очереди");
+        System.out.println("Введите название элемента, который необходимо удалить");
         key = keyboard.next();
         unfairWaitList.remove(key);
         System.out.println(unfairWaitList);
+
+        // Перенос элемента в конец очереди
         System.out.println("Перенос элемента в конец очереди");
+        System.out.println("Какой элемент необходимо перенести в конец очереди?");
         key = keyboard.next();
         unfairWaitList.moveToBack(key);
         System.out.println(unfairWaitList);
