@@ -24,3 +24,6 @@ hs_err_pid*
 
 # Configure files
 .idea/*
+
+#iml file
+.iml
